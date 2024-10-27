@@ -7,16 +7,16 @@ import os
 
 @st.cache_resource
 def load_model():
-    model_url = "https://catsvsdogskaran.s3.eu-north-1.amazonaws.com/cvdmodel.h5"
+    #model_url = "https://catsvsdogskaran.s3.eu-north-1.amazonaws.com/cvdmodel.h5"
     model_path = "cvdmodel.h5"
 
-    if not os.path.exists(model_path):
-        response = requests.get(model_url)
-        if response.status_code == 200:
-            with open(model_path, 'wb') as f:
-                f.write(response.content)
-        else:
-            st.error("Failed to download model. Please check the URL.")
+    # if not os.path.exists(model_path):
+    #     response = requests.get(model_url)
+    #     if response.status_code == 200:
+    #         with open(model_path, 'wb') as f:
+    #             f.write(response.content)
+    #     else:
+    #         st.error("Failed to download model. Please check the URL.")
 
     return tf.keras.models.load_model(model_path)
 
