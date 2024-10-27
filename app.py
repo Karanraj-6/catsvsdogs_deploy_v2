@@ -8,7 +8,7 @@ import os
 @st.cache_resource
 def load_model():
     #model_url = "https://catsvsdogskaran.s3.eu-north-1.amazonaws.com/cvdmodel.h5"
-    model_path = "cvdmodel.h5"
+    model_path = "cats_vs_dogs_model.h5"
 
     # if not os.path.exists(model_path):
     #     response = requests.get(model_url)
